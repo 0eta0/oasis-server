@@ -13,7 +13,7 @@ class Data():
       findItems = mongo.ranking.find(
           datas,
           {'_id': 0}
-      ).sort([('rate', -1), ('date', 1)])
+      ).sort([('rate', -1), ('date', 1)]).limit(25)
       return bson.dumps(findItems, ensure_ascii=False)
 
   def insert(self, datas):
