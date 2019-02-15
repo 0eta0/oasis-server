@@ -3,7 +3,8 @@ from pymongo.errors import *
 import json
 import bson.json_util as bson
 from Message import MessageJson
-client = MongoClient('localhost', 27017)
+#client = MongoClient('localhost', 27017)
+client = MongoClient("mongodb+srv://oasis:oasis@oasis-lgubq.mongodb.net/test?retryWrites=true", 27017)
 mongo = client.oasis
 
 

@@ -17,6 +17,8 @@ class DataAPI(object):
             res.context['result'] = Data().find(req.context['doc'])
         elif operation == 'insert':
             res.context['result'] = Data().insert(req.context['doc'])
+        elif operation == 'delete':
+            res.context['result'] = Data().delete(req.context['doc'])
         res.status = falcon.HTTP_200
 
 
